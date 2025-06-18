@@ -919,7 +919,7 @@ hal.instrumentation.enable u:object_r:hal_instrumentation_prop:s0 exact bool
 
 # default contexts only accessible by coredomain
 init.svc. u:object_r:init_service_status_private_prop:s0 prefix string
-
+sys.refresh_theme       u:object_r:theme_prop:s0
 # Globally-readable init service props
 init.svc.adbd           u:object_r:init_service_status_prop:s0 exact string
 init.svc.bugreport      u:object_r:init_service_status_prop:s0 exact string
