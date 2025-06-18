@@ -96,6 +96,10 @@ allow zygote app_data_file_type:dir getattr;
 # Create dirs in the app data isolation tmpfs mounts and bind mount on them.
 allow zygote tmpfs:dir { create_dir_perms mounton };
 
+# Themes
+allow zygote theme_data_file:file r_file_perms;
+allow zygote theme_data_file:dir r_dir_perms;
+
 # Create the '/data/user/0 => /data/data' symlink in the /data/user tmpfs mount
 # when setting up app data isolation.
 allow zygote tmpfs:lnk_file create;
