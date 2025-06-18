@@ -102,6 +102,10 @@ allow system_server self:process ptrace;
 allow system_server zygote:fd use;
 allow system_server zygote:process sigchld;
 
+# allow system_server to look into theme resources
+allow system_server theme_data_file:dir search;
+
+
 # May kill zygote (or its child processes) on crashes.
 allow system_server {
   app_zygote
