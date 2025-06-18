@@ -319,7 +319,8 @@ type repair_mode_metadata_file, file_type;
 type aconfig_storage_metadata_file, file_type;
 # Aconfig storage flag value persistent copy
 type aconfig_storage_flags_metadata_file, file_type;
-
+# Themes
+type theme_data_file, file_type, data_file_type;
 # Type for /dev/cpu_variant:.*.
 type dev_cpu_variant, file_type;
 # Speedup access for trusted applications to the runtime event tags
