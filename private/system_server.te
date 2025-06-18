@@ -185,6 +185,10 @@ allow system_server self:netlink_route_socket nlmsg_write;
 # Use XFRM (IPsec) netlink sockets
 allow system_server self:netlink_xfrm_socket { create_socket_perms_no_ioctl nlmsg_write nlmsg_read };
 
+# theme property
+get_prop(system_server, theme_prop)
+set_prop(system_server, theme_prop)
+
 # Kill apps.
 allow system_server appdomain:process { getpgid sigkill signal };
 # signull allowed for kill(pid, 0) existence test.
