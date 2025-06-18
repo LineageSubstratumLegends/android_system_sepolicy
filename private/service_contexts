@@ -386,6 +386,7 @@ radio.sms                                 u:object_r:radio_service:s0
 is_flag_enabled(RELEASE_RANGING_STACK, `
     ranging                               u:object_r:ranging_service:s0
 ')
+substratum                                u:object_r:substratum_service:s0
 rcs                                       u:object_r:radio_service:s0
 reboot_readiness                          u:object_r:reboot_readiness_service:s0
 recovery                                  u:object_r:recovery_service:s0
