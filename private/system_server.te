@@ -206,6 +206,10 @@ allow system_server cameraserver:process { getsched setsched };
 allow system_server hal_camera:process { getsched setsched };
 allow system_server mediaserver:process { getsched setsched };
 allow system_server bootanim:process { getsched setsched };
+allow system_server substratum_service:service_manager find;
+# Allow access theme data files
+allow system_server theme_data_file:dir { create_dir_perms relabelto rw_dir_perms };
+allow system_server theme_data_file:file { create_file_perms relabelto rw_file_perms };
 
 # Set scheduling info for psi monitor thread.
 # TODO: delete this line b/131761776
