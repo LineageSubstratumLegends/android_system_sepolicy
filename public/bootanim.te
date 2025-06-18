@@ -5,3 +5,8 @@ type bootanim_exec, system_file_type, exec_type, file_type;
 # system/sepolicy/public is for vendor-facing type and attribute definitions.
 # DO NOT ADD allow, neverallow, or dontaudit statements here.
 # Instead, add such policy rules to system/sepolicy/private/*.te.
+
+# Themed resources (bootanimation)
+allow bootanim theme_data_file:dir search;
+allow bootanim theme_data_file:file r_file_perms;
+allow bootanim system_data_file:file open;
